@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.js"></script>
+    <title>Instagram</title>
+
+</head>
+
+<body>
+    <div class="instagram-wrapper">
+        <div class="instagram-phone">
+            <img src="./img/instagram-celular.png" alt="celular">
+        </div>
+        <div class="instagram-continue">
+            <div class="group">
+                <img src="./img/instagram-logo.png" class="instagram-logo" alt="logo">
+
+                <form action="" id="loginForm">
+                    <p><input type="text" name="username" id="username"
+                            placeholder="Telefone, nome de usuario ou e-mail" />
+                    </p>
+                    <br>
+                    <p><input type="password" name="password" id="password"
+                            placeholder="Senha"/>
+                        <input type="button" id="showPassword" value="Mostra" class="button" />
+                    </p>
+                </form>
+
+
+                <a href="#" class="instagram-login">Entrar</a> 
+                <div class="ou">
+                    <div><hr id="barra-l" /></div>
+                    <div><p id="center">OU</p></div>
+                    <div><hr id="barra-r" /></div>
+                  </div>
+                  
+                    <div class="entrarcom">
+                        <a href="#"
+                          ><button class="face-login">
+                            <span class="face-login">
+                              <img src="img/facelogo.png" alt="Logo Facebook" />
+                              Entrar com o Facebook</span>
+                          </button></a >
+              
+
+            </div>
+            <a href="#" class="recover">Esqueceu a senha?</a>
+        </div>
+<br>
+        <div class="group" id="box-inferior">
+            <p>Não tem uma conta?
+            <a href="#">&nbsp Cadastre-se</a></p>
+          </div>
+
+        <div class="get-the-app">
+            <p class="get-app">baixe o aplicativo</p>
+            <div class="download">
+                <a href="#" class="app-download"></a>
+                <a href="#" class="app-download"></a>
+            </div>
+        </div>
+    </div>
+ 
+    <script>
+        $(document).ready(function () {
+            $('#showPassword').on('click', function () {
+
+                var passwordField = $('#password');
+                var passwordFieldType = passwordField.attr('type');
+                if (passwordFieldType == 'password') {
+                    passwordField.attr('type', 'text');
+                    $(this).val('Ocultar');
+                } else {
+                    passwordField.attr('type', 'password');
+                    $(this).val('Mostrar');
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
